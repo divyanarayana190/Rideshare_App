@@ -1,0 +1,26 @@
+import { SHADOW_CARD } from "@/constants/design";
+
+export const RQ = {
+  bg: "#F8FAFC",
+  surface: "#FFFFFF",
+  surfaceMuted: "#F1F5F9",
+  border: "#E2E8F0",
+  borderSoft: "#F1F5F9",
+  text: "#0F172A",
+  textSecondary: "#64748B",
+  textMuted: "#94A3B8",
+  blue: "#1E88FF",
+  blueDark: "#1565D8",
+  green: "#22C55E",
+  greenSoft: "#ECFDF5",
+  orange: "#F59E0B",
+  orangeSoft: "#FFF7ED",
+  red: "#EF4444",
+  redSoft: "#FEF2F2",
+  purple: "#7C3AED",
+  purpleSoft: "#F5F3FF",
+  radius: 26,
+  radiusMd: 20,
+  radiusSm: 14,
+  shadow: SHADOW_CARD,
+} as const;

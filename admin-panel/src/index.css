@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body { margin: 0; min-height: 100vh; }
+
+#root { min-height: 100vh; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #475569; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #64748B; }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   LIGHT MODE - Override Tailwind CSS Variables for the slate palette
+   ═══════════════════════════════════════════════════════════════════════════ */
+html.light {
+  color-scheme: light;
+  --color-slate-950: #f8fafc;
+  --color-slate-900: #ffffff;
+  --color-slate-800: #f1f5f9;
+  --color-slate-700: #e2e8f0;
+  --color-slate-600: #cbd5e1;
+  --color-slate-500: #94a3b8;
+  --color-slate-400: #64748b;
+  --color-slate-300: #475569;
+  --color-slate-200: #334155;
+  --color-slate-100: #1e293b;
+  --color-slate-50: #0f172a;
+}
+
+html.light ::-webkit-scrollbar-thumb { background: #cbd5e1; }
+html.light ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+/* White text → dark text in light mode for body content */
+html.light .text-white {
+  color: #1e293b;
+}
+
+/* Preserve white text on colored button/badge backgrounds */
+html.light .bg-blue-600,
+html.light .bg-blue-700,
+html.light .bg-red-600,
+html.light .bg-red-700,
+html.light .bg-green-600,
+html.light .bg-green-700,
+html.light .bg-orange-600,
+html.light .bg-orange-700,
+html.light .bg-violet-600,
+html.light .bg-violet-700,
+html.light .bg-teal-600,
+html.light .bg-teal-700 {
+  color: #ffffff;
+}
+
+/* Gradient avatar text stays white */
+html.light [class*="bg-gradient-to"] {
+  color: #ffffff;
+}
+
+/* Modal backdrops stay dark */
+html.light .bg-black\/60,
+html.light .bg-black\/50 {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Chart tooltips */
+html.light .recharts-default-tooltip {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  color: #1e293b !important;
+}
+
+/* Form inputs in light mode */
+html.light input,
+html.light select,
+html.light textarea {
+  color: #1e293b;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* Card shadows for light mode depth */
+html.light [class*="rounded-xl"][class*="border"] {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+/* Active nav link border visibility */
+html.light .border-l-2.border-blue-500 {
+  border-left-color: #2563eb;
+}
+
+/* Sidebar user avatar */
+html.light .bg-blue-600 {
+  color: #ffffff;
+}

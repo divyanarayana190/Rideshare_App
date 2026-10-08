@@ -1,0 +1,18 @@
+[deploy]
+startCommand = "pnpm db:migrate:prod && pnpm start"
+healthcheckPath = "/healthz"
+healthcheckTimeout = 30
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 3
+
+# ── Required Railway service variables (Rideshare backend) ───────────────────
+# Set in Railway → backend service → Variables, or link the Redis plugin:
+#
+#   REDIS_URL=${{Redis.REDIS_URL}}
+#
+# The server reads process.env.REDIS_URL in server/redis.ts (ioredis).
+# Without it, OTP cache, rate limits, and admin cache fall back to in-memory
+# and Infra Health marks system status as DEGRADED.
+#
+# Also required: DATABASE_URL, JWT_SECRET, STRIPE_WEBHOOK_SECRET
+# Recommended:  STRIPE_SECRET_KEY, GOOGLE_MAPS_API_KEY, TWILIO_*

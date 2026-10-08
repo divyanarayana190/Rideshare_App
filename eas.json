@@ -1,0 +1,40 @@
+{
+  "cli": {
+    "version": ">= 19.1.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "env": {
+        "SENTRY_DISABLE_AUTO_UPLOAD": "true"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "SENTRY_DISABLE_AUTO_UPLOAD": "true",
+        "EXPO_PUBLIC_API_BASE_URL": "https://rideshare-production-7d9f.up.railway.app",
+        "EXPO_PUBLIC_OAUTH_SERVER_URL": "https://rideshare-production-7d9f.up.railway.app"
+      }
+    },
+    "production": {
+      "autoIncrement": true,
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "env": {
+        "SENTRY_DISABLE_AUTO_UPLOAD": "true",
+        "EXPO_PUBLIC_API_BASE_URL": "https://rideshare-production-7d9f.up.railway.app",
+        "EXPO_PUBLIC_OAUTH_SERVER_URL": "https://rideshare-production-7d9f.up.railway.app"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

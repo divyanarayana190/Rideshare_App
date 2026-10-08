@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1781071242322,
+      "tag": "0000_fair_edwin_jarvis",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1782536400000,
+      "tag": "0001_add_poster_role",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1782540000000,
+      "tag": "0002_rides_driverid_nullable",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1782543600000,
+      "tag": "0003_communities",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1782547200000,
+      "tag": "0004_community_metadata",
+      "breakpoints": true
+    }
+  ]
+}

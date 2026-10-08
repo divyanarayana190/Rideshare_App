@@ -1,0 +1,40 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "customConditions": ["react-native", "react-native-strict-api"],
+    "types": [
+      "node",
+      "nativewind/types"
+    ],
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "@shared/*": [
+        "./shared/*"
+      ]
+    },
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "noImplicitAny": true
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts",
+    "nativewind-env.d.ts",
+    "types/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "admin-panel",
+    "__tests__",
+    "dist",
+    "server/test-fetch.ts",
+    "tests",
+    "server/seed-users.ts",
+    "**/*.md"
+  ]
+}

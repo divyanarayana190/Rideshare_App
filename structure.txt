@@ -1,0 +1,444 @@
+.
+├── __tests__
+│   └── rideshare.test.ts
+├── admin-panel
+│   ├── dist
+│   │   ├── assets
+│   │   │   ├── index-BYb1lhky.js
+│   │   │   └── index-DXrHkXqJ.css
+│   │   ├── favicon.svg
+│   │   ├── icons.svg
+│   │   └── index.html
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── pnpm-lock.yaml
+│   ├── public
+│   │   ├── favicon.svg
+│   │   └── icons.svg
+│   ├── README.md
+│   ├── src
+│   │   ├── App.tsx
+│   │   ├── assets
+│   │   │   ├── hero.png
+│   │   │   ├── react.svg
+│   │   │   └── vite.svg
+│   │   ├── components
+│   │   │   ├── analytics
+│   │   │   ├── audit
+│   │   │   ├── dashboard
+│   │   │   ├── layout
+│   │   │   │   ├── AdminLayout.tsx
+│   │   │   │   ├── Header.tsx
+│   │   │   │   └── Sidebar.tsx
+│   │   │   ├── operations
+│   │   │   ├── payments
+│   │   │   ├── promos
+│   │   │   ├── rides
+│   │   │   ├── safety
+│   │   │   ├── ui
+│   │   │   └── users
+│   │   ├── hooks
+│   │   ├── index.css
+│   │   ├── lib
+│   │   │   └── api.ts
+│   │   ├── main.tsx
+│   │   ├── pages
+│   │   │   ├── AnalyticsPage.tsx
+│   │   │   ├── AuditLogsPage.tsx
+│   │   │   ├── DashboardPage.tsx
+│   │   │   ├── DriverApplicationsPage.tsx
+│   │   │   ├── LoginPage.tsx
+│   │   │   ├── MessagesPage.tsx
+│   │   │   ├── NotificationsPage.tsx
+│   │   │   ├── OperationsPage.tsx
+│   │   │   ├── PaymentsPage.tsx
+│   │   │   ├── PromosPage.tsx
+│   │   │   ├── RidesPage.tsx
+│   │   │   ├── SafetyPage.tsx
+│   │   │   ├── SupportPage.tsx
+│   │   │   └── UsersPage.tsx
+│   │   ├── store
+│   │   │   ├── auth.ts
+│   │   │   └── theme.ts
+│   │   └── types
+│   │       └── index.ts
+│   ├── tsconfig.app.json
+│   ├── tsconfig.json
+│   ├── tsconfig.node.json
+│   └── vite.config.ts
+├── app
+│   ├── _layout.tsx
+│   ├── (tabs)
+│   │   ├── _layout.tsx
+│   │   ├── index.tsx
+│   │   ├── profile.tsx
+│   │   └── rides.tsx
+│   ├── active-ride.tsx
+│   ├── analytics-dashboard.tsx
+│   ├── auth
+│   │   ├── _layout.tsx
+│   │   ├── forgot-password.tsx
+│   │   ├── sign-in-v2.tsx
+│   │   ├── sign-in.tsx
+│   │   ├── sign-up.tsx
+│   │   └── verify-otp.tsx
+│   ├── book-ride-v2.tsx
+│   ├── book-ride.tsx
+│   ├── booking-for-others.tsx
+│   ├── carpool-marketplace.tsx
+│   ├── chat-screen.tsx
+│   ├── confirm-ride.tsx
+│   ├── create-ride.tsx
+│   ├── dev
+│   │   └── theme-lab.tsx
+│   ├── driver-application-status.tsx
+│   ├── driver-earnings.tsx
+│   ├── driver-license-verification.tsx
+│   ├── driver-mode.tsx
+│   ├── driver-onboarding.tsx
+│   ├── emergency-sos.tsx
+│   ├── fare-estimator.tsx
+│   ├── find-shared-v2.tsx
+│   ├── find-shared.tsx
+│   ├── help-support.tsx
+│   ├── live-chat.tsx
+│   ├── loyalty-rewards-v2.tsx
+│   ├── loyalty-rewards.tsx
+│   ├── map-picker.tsx
+│   ├── multi-stop-ride.tsx
+│   ├── notifications.tsx
+│   ├── oauth
+│   │   └── callback.tsx
+│   ├── payment-methods-v2.tsx
+│   ├── payment-methods.tsx
+│   ├── promo-codes.tsx
+│   ├── rate-ride-v2.tsx
+│   ├── rate-ride.tsx
+│   ├── recurring-rides.tsx
+│   ├── referral.tsx
+│   ├── ride-detail.tsx
+│   ├── ride-history.tsx
+│   ├── ride-options.tsx
+│   ├── ride-receipt.tsx
+│   ├── safety-preferences-v2.tsx
+│   ├── safety-preferences.tsx
+│   ├── stripe-add-card.tsx
+│   ├── stripe-cards.tsx
+│   ├── ticket-detail.tsx
+│   ├── trip-receipt.tsx
+│   └── wallet.tsx
+├── app.config.ts
+├── ARCHITECTURE_DEEP_DIVE.md
+├── assets
+│   ├── fonts
+│   │   └── SpaceMono-Regular.ttf
+│   └── images
+│       ├── android-icon-background.png
+│       ├── android-icon-foreground.png
+│       ├── android-icon-monochrome.png
+│       ├── favicon.png
+│       ├── icon.png
+│       ├── partial-react-logo.png
+│       ├── react-logo.png
+│       ├── react-logo@2x.png
+│       ├── react-logo@3x.png
+│       └── splash-icon.png
+├── babel.config.js
+├── COMPLETE_GUIDE.md
+├── COMPLETE_PRODUCTION_GUIDE.md
+├── components
+│   ├── AppLoadingScreen.tsx
+│   ├── DriverTrackingMapView.native.tsx
+│   ├── DriverTrackingMapView.web.tsx
+│   ├── ErrorBoundary.tsx
+│   ├── external-link.tsx
+│   ├── GoogleMapView.native.tsx
+│   ├── GoogleMapView.web.tsx
+│   ├── haptic-tab.tsx
+│   ├── hello-wave.tsx
+│   ├── live-map.tsx
+│   ├── OfflineBanner.tsx
+│   ├── parallax-scroll-view.tsx
+│   ├── ride-card-v2.tsx
+│   ├── ride-card.tsx
+│   ├── RouteMapView.native.tsx
+│   ├── RouteMapView.web.tsx
+│   ├── SafetyPreferencesModal.tsx
+│   ├── screen-container.tsx
+│   ├── StopsList.tsx
+│   ├── themed-view.tsx
+│   └── ui
+│       ├── collapsible.tsx
+│       ├── icon-symbol.ios.tsx
+│       └── icon-symbol.tsx
+├── constants
+│   ├── const.ts
+│   ├── oauth.ts
+│   └── theme.ts
+├── DEPLOYMENT_GUIDE.md
+├── design.md
+├── dist
+│   ├── _expo
+│   │   └── static
+│   │       ├── css
+│   │       │   └── web-5bc3e8cc56a06885dbfc8c362da850b7.css
+│   │       └── js
+│   │           └── web
+│   │               └── entry-2b2a133152dd2c3e62c02aecd2c84ffb.js
+│   ├── _sitemap.html
+│   ├── (tabs)
+│   │   ├── index.html
+│   │   ├── profile.html
+│   │   └── rides.html
+│   ├── +not-found.html
+│   ├── active-ride.html
+│   ├── admin-dashboard.html
+│   ├── analytics-dashboard.html
+│   ├── assets
+│   │   └── assets
+│   │       └── fonts
+│   │           └── SpaceMono-Regular.b0ea4c1a4ffde563a4d07fb343ed77bc.ttf
+│   ├── auth
+│   │   ├── sign-in-v2.html
+│   │   ├── sign-in.html
+│   │   ├── sign-up.html
+│   │   └── verify-otp.html
+│   ├── book-ride-v2.html
+│   ├── book-ride.html
+│   ├── booking-for-others.html
+│   ├── carpool-marketplace.html
+│   ├── chat-screen.html
+│   ├── confirm-ride.html
+│   ├── create-ride.html
+│   ├── dev
+│   │   └── theme-lab.html
+│   ├── driver-earnings.html
+│   ├── driver-license-verification.html
+│   ├── driver-mode.html
+│   ├── driver-onboarding.html
+│   ├── emergency-sos.html
+│   ├── fare-estimator.html
+│   ├── favicon.ico
+│   ├── find-shared-v2.html
+│   ├── find-shared.html
+│   ├── index.html
+│   ├── loyalty-rewards-v2.html
+│   ├── loyalty-rewards.html
+│   ├── map-picker.html
+│   ├── multi-stop-ride.html
+│   ├── notifications.html
+│   ├── oauth
+│   │   └── callback.html
+│   ├── payment-methods-v2.html
+│   ├── payment-methods.html
+│   ├── profile.html
+│   ├── promo-codes.html
+│   ├── rate-ride-v2.html
+│   ├── rate-ride.html
+│   ├── recurring-rides.html
+│   ├── referral.html
+│   ├── ride-detail.html
+│   ├── ride-history.html
+│   ├── ride-options.html
+│   ├── rides.html
+│   ├── safety-preferences-v2.html
+│   ├── safety-preferences.html
+│   ├── trip-receipt.html
+│   └── wallet.html
+├── drizzle
+│   ├── 0000_elite_eternals.sql
+│   ├── 0001_heavy_psynapse.sql
+│   ├── 0002_colorful_mister_sinister.sql
+│   ├── 0002_rich_malice.sql
+│   ├── 0003_outstanding_strong_guy.sql
+│   ├── 0003_rapid_tattoo.sql
+│   ├── 0004_mid_ride_join.sql
+│   ├── 0004_student_fields.sql
+│   ├── meta
+│   │   ├── _journal.json
+│   │   ├── 0000_snapshot.json
+│   │   ├── 0001_snapshot.json
+│   │   ├── 0002_snapshot.json
+│   │   └── 0003_snapshot.json
+│   ├── migrations
+│   ├── relations.ts
+│   └── schema.ts
+├── drizzle.config.ts
+├── eslint.config.js
+├── expo-env.d.ts
+├── FIREBASE_SETUP.md
+├── generate_docs.py
+├── global.css
+├── hooks
+│   ├── use-auth.ts
+│   ├── use-color-scheme.ts
+│   ├── use-color-scheme.web.ts
+│   ├── use-colors.ts
+│   ├── use-network-status.ts
+│   ├── use-push-notifications.ts
+│   └── use-socket.ts
+├── IMPLEMENTATION_SUMMARY.md
+├── INTEGRATION_GUIDE.md
+├── ios
+│   ├── Podfile
+│   ├── Podfile.properties.json
+│   ├── RideShare
+│   │   ├── AppDelegate.swift
+│   │   ├── Images.xcassets
+│   │   │   ├── AppIcon.appiconset
+│   │   │   │   ├── App-Icon-1024x1024@1x.png
+│   │   │   │   └── Contents.json
+│   │   │   ├── Contents.json
+│   │   │   ├── SplashScreenBackground.colorset
+│   │   │   │   └── Contents.json
+│   │   │   └── SplashScreenLogo.imageset
+│   │   │       ├── Contents.json
+│   │   │       ├── image.png
+│   │   │       ├── image@2x.png
+│   │   │       └── image@3x.png
+│   │   ├── Info.plist
+│   │   ├── RideShare-Bridging-Header.h
+│   │   ├── RideShare.entitlements
+│   │   ├── SplashScreen.storyboard
+│   │   └── Supporting
+│   │       └── Expo.plist
+│   └── RideShare.xcodeproj
+│       ├── project.pbxproj
+│       ├── project.xcworkspace
+│       │   ├── contents.xcworkspacedata
+│       │   └── xcshareddata
+│       │       ├── IDEWorkspaceChecks.plist
+│       │       └── swiftpm
+│       │           └── configuration
+│       └── xcshareddata
+│           └── xcschemes
+│               └── RideShare.xcscheme
+├── lib
+│   ├── _core
+│   │   ├── api.ts
+│   │   ├── auth.ts
+│   │   ├── manus-runtime.ts
+│   │   ├── nativewind-pressable.ts
+│   │   └── theme.ts
+│   ├── auth-context-v2.tsx
+│   ├── i18n.ts
+│   ├── location.ts
+│   ├── maps-service.ts
+│   ├── mock-data.ts
+│   ├── notifications-service.ts
+│   ├── rides-store.tsx
+│   ├── theme-provider.tsx
+│   ├── trpc-client.ts
+│   ├── trpc.ts
+│   ├── types.ts
+│   ├── use-ride-events.ts
+│   └── utils.ts
+├── locales
+│   ├── ar.json
+│   ├── en.json
+│   ├── es.json
+│   ├── fr.json
+│   └── hi.json
+├── MACOS_QUICK_START.md
+├── metro.config.js
+├── nativewind-env.d.ts
+├── package.json
+├── PAYMENT_ARCHITECTURE.md
+├── PHASE2_FEATURES_GUIDE.md
+├── pnpm-lock.yaml
+├── PROJECT_AUDIT_REPORT.md
+├── PROJECT_AUDIT_REPORT.pdf
+├── QUICKSTART.md
+├── README_COMPLETE.md
+├── SCALE_ARCHITECTURE.md
+├── scripts
+│   ├── generate_qr.mjs
+│   ├── load-env.js
+│   ├── reset-project.js
+│   └── seed-admin-data.ts
+├── seed-database.mjs
+├── server
+│   ├── _core
+│   │   ├── context.ts
+│   │   ├── cookies.ts
+│   │   ├── dataApi.ts
+│   │   ├── env.ts
+│   │   ├── imageGeneration.ts
+│   │   ├── index.ts
+│   │   ├── llm.ts
+│   │   ├── notification.ts
+│   │   ├── oauth.ts
+│   │   ├── sdk.ts
+│   │   ├── systemRouter.ts
+│   │   ├── trpc.ts
+│   │   ├── types
+│   │   │   ├── cookie.d.ts
+│   │   │   └── manusTypes.ts
+│   │   └── voiceTranscription.ts
+│   ├── db.ts
+│   ├── logger.ts
+│   ├── README.md
+│   ├── redis.ts
+│   ├── routers.ts
+│   ├── routes
+│   │   ├── admin.ts
+│   │   └── maps.ts
+│   ├── seed-users.ts
+│   ├── services
+│   │   ├── carpoolMatcher.ts
+│   │   ├── driverApplicationService.ts
+│   │   ├── driverMatcher.ts
+│   │   ├── fareEngine.ts
+│   │   ├── fileUploadService.ts
+│   │   ├── googleMaps.ts
+│   │   ├── liveChatService.ts
+│   │   ├── notificationService.ts
+│   │   ├── pushService.ts
+│   │   ├── rewardService.ts
+│   │   ├── rideStateMachine.ts
+│   │   ├── routeMatcher.ts
+│   │   ├── sharedRideMatcher.ts
+│   │   ├── stopManager.ts
+│   │   ├── stripe.ts
+│   │   ├── stripeService.ts
+│   │   ├── supportService.ts
+│   │   ├── twilio.ts
+│   │   ├── walletCreditService.ts
+│   │   └── websocket.ts
+│   ├── storage.ts
+│   └── test-fetch.ts
+├── shared
+│   ├── _core
+│   │   └── errors.ts
+│   ├── const.ts
+│   └── types.ts
+├── STRIPE_PAYMENT_SYSTEM.md
+├── STRIPE_TWILIO_SETUP.md
+├── structure.txt
+├── tailwind.config.js
+├── tests
+│   ├── auth.logout.test.ts
+│   ├── lib
+│   └── server
+│       ├── auth.test.ts
+│       ├── fareEngine.test.ts
+│       └── validation.test.ts
+├── theme.config.d.ts
+├── theme.config.js
+├── todo.md
+├── tsconfig.json
+├── types
+│   └── react-native-compat.d.ts
+├── uploads
+│   ├── insurance
+│   ├── licenses
+│   ├── misc
+│   ├── profiles
+│   └── vehicles
+├── vitest.config.ts
+├── VSCODE_STEP_BY_STEP.md
+└── WALLET_RIDE_CREDITS.md
+
+88 directories, 354 files
